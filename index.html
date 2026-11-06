@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ruturaj Desai | Mechanical Engineer</title>
+  <meta name="description" content="Ruturaj Desai, mechanical engineer working on multibody dynamics, vehicle dynamics, and mechatronic and robotic systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="mode.js"></script>
+  <!-- Editorial theme, layered on top of style.css -->
+  <link rel="stylesheet" href="themes/clean.css">
+  <link rel="stylesheet" href="themes/editorial.css">
+  <script src="projects.js" defer></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <div class="sheet">
+
+    <header class="site-header">
+      <a class="mark" href="#top" aria-label="Ruturaj Desai, home">
+        <span class="monogram mono">RD</span>
+        <span class="mark-name">Ruturaj Desai</span>
+      </a>
+      <nav class="mono">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <a href="assets/Ruturaj_Desai_Resume.pdf" target="_blank" rel="noopener" class="nav-cv">Resume ↗</a>
+      </nav>
+      <button class="mode-toggle" type="button" aria-label="Switch between light and dark mode" title="Light / dark">
+        <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></svg>
+      </button>
+    </header>
+
+    <!-- ================= HOME ================= -->
+    <main id="home">
+      <section id="top" class="hero">
+        <div class="hero-text">
+          <p class="eyebrow mono">Sheet 01 / Profile</p>
+          <div class="name-block">
+            <h1 class="name">Ruturaj <br><span class="name-2">Desai</span></h1>
+            <div class="dim" aria-hidden="true">
+              <span class="dim-rule"></span>
+              <span class="dim-text mono">Mechanical Engineer</span>
+              <span class="dim-rule"></span>
+            </div>
+          </div>
+          <p class="hero-sub">
+            Multibody dynamics, vehicle dynamics, and mechatronic systems.
+            M.S.E. candidate in Mechatronic and Robotic Systems at the University of Pennsylvania.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View projects</a>
+            <a class="btn" href="assets/Ruturaj_Desai_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+            <a class="btn" href="mailto:ruturajd@engineering.upenn.edu">Email</a>
+          </div>
+        </div>
+
+        <figure class="portrait">
+          <!-- Add a photo at assets/photo.jpg (portrait, ~1000x1250). Until then, a placeholder shows. -->
+          <div class="figure portrait-frame">
+            <img src="assets/photo.jpg" alt="Ruturaj Desai" onerror="this.parentElement.classList.add('hatched'); this.remove();">
+            <span class="fig-label">FIG. 00</span>
+          </div>
+          <figcaption class="mono">Philadelphia, PA</figcaption>
+        </figure>
+      </section>
+
+      <dl class="stats">
+        <div><dt>2 yrs</dt><dd class="mono">Simpack consultant, Dassault Syst&egrave;mes</dd></div>
+        <div><dt>Top 2</dt><dd class="mono">of 196 teams, Baja SAE India</dd></div>
+        <div><dt>6</dt><dd class="mono">countries of Simpack deployments</dd></div>
+        <div><dt>1</dt><dd class="mono">journal publication</dd></div>
+      </dl>
+
+      <section id="about" class="section">
+        <h2 class="section-head"><span class="num">01</span>About</h2>
+        <div class="about">
+          <p class="about-lead">
+            I'm a mechanical engineer who likes to model a system properly before building it.
+            I spent two years at Dassault Syst&egrave;mes helping automotive, truck and motorsport
+            teams adopt Simpack for multibody simulation. Before that I captained Team Redshift
+            Racing through a Baja SAE season. Now at Penn, I'm extending that work into robotics,
+            controls and MEMS.
+          </p>
+          <div class="traits">
+            <article>
+              <p class="mono trait-id">A</p>
+              <h3>Simulation first</h3>
+              <p>Multibody models in Simpack and Adams, FEA in ANSYS, topology optimization in Inspire, all before anything gets cut.</p>
+            </article>
+            <article>
+              <p class="mono trait-id">B</p>
+              <h3>Built, not just modeled</h3>
+              <p>Lathe, mill, water jet, laser cutter and 3D printer. I've built everything from Baja uprights to robot chassis.</p>
+            </article>
+            <article>
+              <p class="mono trait-id">C</p>
+              <h3>Leads teams</h3>
+              <p>Captained 45 engineers to a top 2 Baja finish and won funding from 8 industry partners.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <h2 class="section-head"><span class="num">02</span>Projects <span class="count mono" id="project-count"></span></h2>
+        <div id="project-grid" class="grid"></div>
+        <noscript><p>Enable JavaScript to see projects.</p></noscript>
+      </section>
+
+      <section id="experience" class="section">
+        <h2 class="section-head"><span class="num">03</span>Experience</h2>
+        <ol class="rows">
+          <li>
+            <p class="when mono">May 2026 &ndash; Aug 2026</p>
+            <div>
+              <h3>Mechanical Design, Rebuild and Manufacturing Intern</h3>
+              <p class="org">Mid-West Forge Corporation &middot; Cleveland, OH</p>
+              <p>Replaced mechanical switches with laser detection on two axle processing lines, tuned cycle times for FANUC and ABB load-and-stack robots, and helped rebuild heavy forging equipment for Ford and GM axle designs.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when mono">Jul 2023 &ndash; Jul 2025</p>
+            <div>
+              <h3>Industry Process Consultant, Multibody Dynamics</h3>
+              <p class="org">Dassault Syst&egrave;mes &middot; Pune, India</p>
+              <p>Supported Simpack deployments for the worldwide tech sales team in the USA, India, Italy, Germany, China and South Korea, including a PoC for an Italian motorsport team that correlated 55+ metrics on F1/F3 models.</p>
+              <p>Began as a vehicle dynamics and powertrain apprentice: built four 2-stage eDrive gearbox models and automated KnC load cases with Node.js, cutting simulation wall-clock time by 45%.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when mono">Jan 2020 &ndash; May 2023</p>
+            <div>
+              <h3>Team Captain, Vehicle Dynamics Head</h3>
+              <p class="org">Team Redshift Racing, Baja SAE India &middot; Mumbai</p>
+              <p>Led 45 undergraduates to a top 2 finish among 196 teams. Cut prototype cost by 55% and secured 8 industry sponsors.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when mono">Aug 2022 &ndash; Dec 2022</p>
+            <div>
+              <h3>Research Assistant</h3>
+              <p class="org">K.J. Somaiya College of Engineering &middot; University of Mumbai</p>
+              <p>Analytical and FEA modeling of functionally graded beams; the work was published in IJIRSET.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="education" class="section">
+        <h2 class="section-head"><span class="num">04</span>Education</h2>
+        <ol class="rows">
+          <li>
+            <p class="when mono">Expected May 2027</p>
+            <div>
+              <h3>M.S.E. Mechanical Engineering, Mechatronic and Robotic Systems</h3>
+              <p class="org">University of Pennsylvania</p>
+              <p class="muted">Mechatronic System Design, Robotics, Feedback Control, MEMS/NEMS</p>
+            </div>
+          </li>
+          <li>
+            <p class="when mono">May 2023</p>
+            <div>
+              <h3>B.E. Mechanical Engineering</h3>
+              <p class="org">University of Mumbai</p>
+              <p class="muted">Vehicle Dynamics, CAE, CAD/CAM, Machine Design, Material Science, Fluid Mechanics</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="skills" class="section">
+        <h2 class="section-head"><span class="num">05</span>Skills and certifications</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3 class="mono">Core</h3>
+            <ul class="tags"><li>Multibody Dynamics</li><li>Modeling &amp; Simulation</li><li>CAD</li><li>FEA</li><li>CFD</li><li>DFMEA / PFMEA</li><li>GD&amp;T</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="mono">Design &amp; Simulation</h3>
+            <ul class="tags"><li>Simpack</li><li>MSC Adams</li><li>MATLAB</li><li>Altair Inspire</li><li>ANSYS Structural</li><li>SolidWorks</li><li>CATIA</li><li>AutoCAD</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="mono">Programming</h3>
+            <ul class="tags"><li>Python</li><li>C/C++</li><li>JavaScript</li><li>Git</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="mono">Fabrication</h3>
+            <ul class="tags"><li>3D Printing</li><li>Laser Cutting</li><li>Water Jet</li><li>Lathe</li><li>Milling</li><li>CMM</li></ul>
+          </div>
+        </div>
+        <ul class="certs">
+          <li><a href="https://drive.google.com/file/d/1pS-tA_XBJLbyoAUiykb8cN5im9l5i5ks/view" target="_blank" rel="noopener"><span class="mono">CSWP</span>Certified SolidWorks Professional ↗</a></li>
+          <li><a href="https://drive.google.com/file/d/1wzSFis-tdIaMGMoEkwKk-cTgnNuyI0bi/view" target="_blank" rel="noopener"><span class="mono">CSWA</span>Certified SolidWorks Associate ↗</a></li>
+          <li><a href="https://drive.google.com/file/d/12ZyQhObUxmjgxalQRvvWV2j7xJmUMSu5/view" target="_blank" rel="noopener"><span class="mono">CSWA-AM</span>Additive Manufacturing ↗</a></li>
+          <li><a href="https://drive.google.com/file/d/1b71NDCyib1q-nFHppvDFZfTZMyNvjif_/view" target="_blank" rel="noopener"><span class="mono">MATLAB</span>MATLAB Onramp ↗</a></li>
+          <li><a href="https://drive.google.com/file/d/1lOFmJetSvW7j4gQ-2esPBnsPiiE7FEfE/view" target="_blank" rel="noopener"><span class="mono">SIMULINK</span>Simulink Onramp ↗</a></li>
+        </ul>
+      </section>
+
+      <section id="contact" class="section contact">
+        <h2 class="section-head"><span class="num">06</span>Contact</h2>
+        <p class="contact-line">Open to roles in vehicle dynamics, simulation and mechatronic design.</p>
+        <a class="contact-email" href="mailto:ruturajd@engineering.upenn.edu">ruturajd@engineering.upenn.edu</a>
+        <p class="contact-links mono">
+          <a href="https://www.linkedin.com/in/ruturajsdesai/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="assets/Ruturaj_Desai_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+        </p>
+      </section>
+    </main>
+
+    <!-- ================= PROJECT DETAIL (filled in by main.js) ================= -->
+    <main id="project-view" class="project" hidden></main>
+
+    <!-- Title block, like the corner of an engineering drawing -->
+    <footer class="title-block mono">
+      <div><span>Drawn by</span>R. Desai</div>
+      <div><span>Location</span>Philadelphia, PA</div>
+      <div><span>Discipline</span>Mechanical</div>
+      <div><span>Sheet</span>1 of 1</div>
+    </footer>
+  </div>
+
+  <dialog id="lightbox" aria-label="Image viewer">
+    <button class="lightbox-close mono" type="button" aria-label="Close">Close ✕</button>
+    <img src="" alt="">
+    <p class="mono"></p>
+  </dialog>
+</body>
+</html>

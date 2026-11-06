@@ -1,0 +1,27 @@
+/* Shared by every theme except "drawing": strips the drafting-specific decoration
+   (grid paper, crop marks, FIG labels, dimension line, title block). */
+body { background: var(--paper); }
+.sheet { background: transparent; background-image: none; border: 0; outline: 0; margin: 0 auto; }
+.site-header { border-bottom: 1px solid var(--line); }
+
+.figure::after, .fig-label, .fig-ref, .hero .eyebrow { display: none; }
+.figure.hatched { background-image: none; background: var(--placeholder, var(--surface)); }
+.figure.hatched::before {
+  content: "Image coming soon"; position: absolute; inset: 0;
+  display: grid; place-items: center; font-size: 0.8rem; color: var(--muted);
+}
+
+.dim { border: 0; height: auto; display: block; color: var(--muted); }
+.dim-rule { display: none; }
+
+.title-block {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 2rem;
+  padding: 1.75rem var(--pad) 5rem; border-top: 1px solid var(--line);
+  font-family: var(--sans); color: var(--muted);
+}
+.title-block > div { border: 0 !important; padding: 0 !important; }
+.title-block > div:nth-child(n+3), .title-block span { display: none; }
+.title-block > div:first-child::before { content: "\00A9 "; }
+
+:root { --toggle-r: 999px; }
+.mode-toggle { border-color: var(--line); }
