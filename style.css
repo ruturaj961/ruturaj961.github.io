@@ -180,9 +180,9 @@ img { max-width: 100%; display: block; }
 /* ---------- hero ---------- */
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 340px);
-  gap: clamp(2rem, 6vw, 5rem);
-  align-items: end;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
   padding: clamp(3.5rem, 9vw, 7rem) var(--pad) clamp(2.5rem, 6vw, 4rem);
 }
 .name-block { display: inline-block; }
@@ -216,6 +216,39 @@ img { max-width: 100%; display: block; }
 .portrait { margin: 0; }
 .portrait-frame { aspect-ratio: 4 / 5; border: 1px solid var(--line-strong); }
 .portrait figcaption { margin-top: 0.6rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+/* ---------- hero model (hero-figure.js) ---------- */
+.instrument { min-width: 0; display: flex; flex-direction: column; }
+.instrument-head, .instrument-foot {
+  display: flex; justify-content: space-between; gap: 1rem;
+  font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+}
+.fig-num { color: var(--accent); }
+.lens-link { text-decoration: none; color: var(--ink); }
+.lens-link:hover { color: var(--accent); }
+.hero-canvas {
+  display: block; width: 100%; aspect-ratio: 1 / 0.82; margin: 0.5rem 0;
+  cursor: grab; touch-action: pan-y; -webkit-user-select: none; user-select: none;
+}
+.hero-canvas:active { cursor: grabbing; }
+.lenses { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 1rem; border-top: 1px solid var(--line); }
+.lens {
+  all: unset; cursor: pointer; box-sizing: border-box;
+  display: flex; flex-direction: column; gap: 0.3rem;
+  padding: 0.85rem 0.75rem 0.25rem 0; margin-top: -1px; border-top: 2px solid transparent;
+}
+.lens small { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.lens strong { font-size: 0.92rem; font-weight: 500; }
+.lens:hover strong { color: var(--accent); }
+.lens[aria-pressed="true"] { border-top-color: var(--accent); }
+.lens[aria-pressed="true"] strong { color: var(--accent); }
+.lens:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* photo now sits beside the About text */
+.about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(200px, 280px); gap: 2.5rem clamp(2rem, 5vw, 4rem); align-items: start; }
+.about-lead { grid-column: 1; margin: 0; }
+.about-portrait { grid-column: 2; grid-row: 1; }
+.about .traits { grid-column: 1 / -1; }
 
 /* ---------- stats strip ---------- */
 .stats {
@@ -375,6 +408,8 @@ img { max-width: 100%; display: block; }
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; align-items: start; }
+  .about { grid-template-columns: 1fr; }
+  .about-portrait { grid-column: auto; grid-row: auto; max-width: 240px; }
   .portrait { max-width: 260px; order: -1; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .stats > div:nth-child(3) { border-left: 0; padding-left: var(--pad); }
@@ -383,6 +418,7 @@ img { max-width: 100%; display: block; }
   .project-body { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
+  .lenses { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .mark-name { display: none; }
   .site-header nav a[href="#experience"] { display: none; }
   .rows li { grid-template-columns: 1fr; gap: 0.35rem; }

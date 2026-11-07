@@ -9,10 +9,11 @@ A plain HTML/CSS/JS site with no build step. Open `index.html` in a browser to p
 | `index.html` | Home page content: hero, stats, about, experience, education, skills, contact |
 | `projects.js` | **All projects.** Each entry is one card on the home page and one detail page |
 | `mode.js` | Light/dark toggle (the button in the header). Light by default; remembers the visitor's choice |
+| `hero-figure.js` | The interactive 3D point model in the hero (robot arm, car, gyroscope, beam). Drag to rotate; the buttons under it switch models. The model marked `aria-pressed="true"` in `index.html` is shown first, and `?model=car` opens a specific one |
 | `main.js` | Builds the cards and detail pages from `projects.js`. Rarely needs editing |
 | `style.css` | Base layout and styling |
 | `themes/clean.css`, `themes/editorial.css` | The Editorial theme: fonts, colors and spacing |
-| `assets/photo.jpg` | Hero portrait (add one, about 1000x1250). A hatched placeholder shows until it exists |
+| `assets/photo.jpg` | Portrait in the About section (add one, about 1000x1250). An "Image coming soon" placeholder shows until it exists |
 | `assets/thumbs/` | Project thumbnails (landscape, about 1600x1000) |
 | `assets/projects/` | Gallery images for project pages (create the folder when needed) |
 | `assets/Ruturaj_Desai_Resume.pdf` | The resume behind every Resume link |

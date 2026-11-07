@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="themes/editorial.css">
   <script src="projects.js" defer></script>
   <script src="main.js" defer></script>
+  <script src="hero-figure.js" defer></script>
 </head>
 <body>
   <div class="sheet">
@@ -60,14 +61,24 @@
           </div>
         </div>
 
-        <figure class="portrait">
-          <!-- Add a photo at assets/photo.jpg (portrait, ~1000x1250). Until then, a placeholder shows. -->
-          <div class="figure portrait-frame">
-            <img src="assets/photo.jpg" alt="Ruturaj Desai" onerror="this.parentElement.classList.add('hatched'); this.remove();">
-            <span class="fig-label">FIG. 00</span>
+        <div class="instrument">
+          <div class="instrument-head mono">
+            <span class="fig-num">Fig. 01 / Robotics</span>
+            <span>Point model</span>
           </div>
-          <figcaption class="mono">Philadelphia, PA</figcaption>
-        </figure>
+          <canvas class="hero-canvas" tabindex="0" role="img"
+            aria-label="Rotating point-cloud model: a 7-DoF robot arm. Drag or use the arrow keys to rotate."></canvas>
+          <div class="instrument-foot mono">
+            <span>Drag to rotate</span>
+            <a class="lens-link" href="#/project/franka-motion-planning">Related project →</a>
+          </div>
+          <div class="lenses" role="group" aria-label="Choose a model">
+            <button class="lens" type="button" data-shape="arm" data-label="a 7-DoF robot arm" data-project="franka-motion-planning" aria-pressed="true"><small>01 / Move</small><strong>Robotics</strong></button>
+            <button class="lens" type="button" data-shape="car" data-label="a car" data-project="baja-suspension-steering" aria-pressed="false"><small>02 / Drive</small><strong>Vehicle dynamics</strong></button>
+            <button class="lens" type="button" data-shape="gyro" data-label="a gyroscope" data-project="mems-gyroscope" aria-pressed="false"><small>03 / Sense</small><strong>MEMS</strong></button>
+            <button class="lens" type="button" data-shape="beam" data-label="a deflected cantilever beam" data-project="functionally-graded-beams" aria-pressed="false"><small>04 / Analyze</small><strong>Simulation</strong></button>
+          </div>
+        </div>
       </section>
 
       <dl class="stats">
@@ -87,6 +98,14 @@
             Racing through a Baja SAE season. Now at Penn, I'm extending that work into robotics,
             controls and MEMS.
           </p>
+          <figure class="portrait about-portrait">
+            <!-- Add a photo at assets/photo.jpg (portrait, ~1000x1250). Until then, a placeholder shows. -->
+            <div class="figure portrait-frame">
+              <img src="assets/photo.jpg" alt="Ruturaj Desai" onerror="this.parentElement.classList.add('hatched'); this.remove();">
+              <span class="fig-label">FIG. 00</span>
+            </div>
+            <figcaption class="mono">Philadelphia, PA</figcaption>
+          </figure>
           <div class="traits">
             <article>
               <p class="mono trait-id">A</p>
